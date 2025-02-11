@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <!-- Include the LIFF SDK -->
-    <!--<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>-->
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -28,17 +28,17 @@
     <script>
 
       // LIFF Initialization
-      // liff.init({ liffId: "2006889904-jl4yZwz5" }) // Replace "YOUR_LIFF_ID" with your actual LIFF ID
-      //   .then(() => {
-      //     console.log("LIFF initialized successfully.");
-      //     // Optional: Check if the user is logged in
-      //     if (!liff.isLoggedIn()) {
-      //       liff.login(); // Redirects to LINE login if not logged in
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     console.error("LIFF initialization failed", err);
-      //   });
+      liff.init({ liffId: "2006889904-jl4yZwz5" }) // Replace "YOUR_LIFF_ID" with your actual LIFF ID
+        .then(() => {
+          console.log("LIFF initialized successfully.");
+          // Optional: Check if the user is logged in
+          if (!liff.isLoggedIn()) {
+            liff.login(); // Redirects to LINE login if not logged in
+          }
+        })
+        .catch((err) => {
+          console.error("LIFF initialization failed", err);
+        });
       //Unity WebGl
 
       var container = document.querySelector("#unity-container");
